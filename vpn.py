@@ -2,10 +2,8 @@ import os
 import psutil
 from pathlib import Path
 def killovpn():  
-    for proc in psutil.process_iter():
-        if any(procstr in proc.name() for procstr in\
-            ['Openvpn', 'openvpn-gui.exe', 'openvpn-gui', 'awooogatest']):
-            proc.kill()
+    cmd = 'start C:\\"Program Files"\OpenVPN\\bin\openvpn-gui.exe --command exit'
+    os.system(cmd)
 def vpn_connect(location):
     selfdir = str(Path(__file__).parent.absolute())
     configdir = selfdir + '\\' + location + '.ovpn'
