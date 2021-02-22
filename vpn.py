@@ -1,4 +1,3 @@
-import subprocess
 import os
 import psutil
 from pathlib import Path
