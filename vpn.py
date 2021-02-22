@@ -7,7 +7,6 @@ def killovpn():
             ['Openvpn', 'openvpn-gui.exe', 'openvpn-gui', 'awooogatest']):
             proc.kill()
 def vpn_connect(location):
-    location_local = location
     selfdir = str(Path(__file__).parent.absolute())
     configdir = selfdir + '\\' + location + '.ovpn'
     killovpn()
